@@ -73,7 +73,12 @@ class TestVolpiano(unittest.TestCase):
         self.assertEqual(set(volpianos), set(obtainGT))
 
     def test_volpiano_validate(self):
-        pass
+        for idx, v in enumerate(obtainGT):
+            with self.subTest(true_volpiano_idx=idx):
+                self.assertTrue(volpiano.validate(v))
+        for idx, v in enumerate(validateFakeGT):
+            with self.subTest(fake_volpiano_idx=idx):
+                self.assertFalse(volpiano.validate(v))
 
     def test_volpiano_compare(self):
         pass
