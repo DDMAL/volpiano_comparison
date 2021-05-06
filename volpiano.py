@@ -1,6 +1,7 @@
 from urllib.request import urlopen
 from io import StringIO
 from csv import DictReader
+from difflib import SequenceMatcher
 import re
 
 paris15181 = "https://cantus.uwaterloo.ca/sites/default/files/csv/123631.csv"
@@ -37,5 +38,10 @@ def validate(volpiano):
     return not invalidCharacters
 
 
-def compare():
-    pass
+def compare(v1, v2):
+    """Compare two volpiano strings.
+
+    Return a similarity metric beteween [0, 1].
+    """
+    comp = SequenceMatcher(a=v1, b=v2)
+    return comp.ratio()
