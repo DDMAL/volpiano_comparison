@@ -1,4 +1,4 @@
-# volpiano_toys
+# Volpiano Toys
 A pedagogical codebase for operating with volpiano strings.
 
 ## Cloning
