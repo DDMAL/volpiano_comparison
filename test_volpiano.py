@@ -53,6 +53,19 @@ obtainGT = [
     "1---h--h--h7---3",
 ]
 
+validateFakeGT = [
+    "---w-OB--4K--KB-kW-v",
+    "-H--w---o-a-D-HFR-9-",
+    "--4-E--Su-zc5--X-G-1",
+    "-[uC-----D--kO-5----",
+    "--e-pf]a----5E-5-6w-",
+    "---Y--)--5v-(-W--Z-y",
+    "1----au--2-----z,---",
+    "-1---[------.----X--",
+    "-U--0]O-qT--A-QVV--u",
+    "WC-f-6---xO4-p,-----",
+]
+
 
 class TestVolpiano(unittest.TestCase):
     def test_volpiano_obtain(self):
