@@ -32,7 +32,9 @@ def validate(volpiano):
     The comparison is done based on whether all characters
     in the string are valid volpiano characters.
     """
-    if not volpiano.startswith("1---") and not volpiano.startswith("2---"):
+    trebleClef = "1---"
+    bassClef = "2---"
+    if volpiano[:4] not in [trebleClef, bassClef]:
         return False
     invalidCharacters = re.sub(valid_characters_re, "", volpiano)
     return not invalidCharacters
